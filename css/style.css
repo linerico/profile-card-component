@@ -1,0 +1,132 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans";
+  background-color: var(--dark-cyan);
+}
+
+p {
+  font-size: 18px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pattern-top,
+.pattern-bottom {
+  position: absolute;
+  width: 800px;
+  z-index: -1;
+}
+
+.pattern-top {
+  bottom: 50vh;
+  right: 50vw;
+}
+
+.pattern-bottom {
+  top: 50vh;
+  left: 50vw;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 20px;
+}
+
+.card .image-container {
+  position: relative;
+  height: 130px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .image-container .profile-image {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  height: 100px;
+}
+
+.card .image-container .profile-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.card .profile-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: var(--dark-gray);
+  padding: 0 20px;
+}
+
+.card .profile-detail .profile-name {
+  font-size: 21px;
+}
+
+.card .profile-detail .profile-name span {
+  font-weight: 700;
+  color: black;
+}
+
+.card .footer {
+  display: flex;
+  border-top: 1px solid #e4e4e4;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.card .footer .footer-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.card .footer .footer-item .item-bold {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.card .footer .footer-item .item-title {
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: var(--dark-gray);
+}
